@@ -1,0 +1,456 @@
+/* Mobile setup */
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: -1000px;
+}
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Cairo', sans-serif;
+}
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    background: #fff;
+}
+
+
+/* Site logo */
+
+.identity
+{
+    text-decoration: none;
+    font-size:1.5em;
+    font-weight: 700;
+    padding: 10px 0 10px 20px;
+
+}
+.identity-black
+{
+    color: black;
+}
+.identity-white
+{
+    color: white;
+}
+.identity-addon
+{
+ position: relative;
+ top: -4px;
+}
+
+/*Nav for mobile */
+
+.mobile-nav-icon, .mobile-nav-cross
+{
+    z-index: 10;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+}
+nav
+{
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    width: 50%;
+    background: #dbdbdb;
+    
+}
+
+nav .mobile-sidebar
+{
+    
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        list-style-type: none;
+        /* margin-top: 50px; */
+}
+nav .mobile-sidebar .nav-elements
+{
+    padding:17px;
+}
+nav .mobile-sidebar .nav-elements a
+{
+    text-decoration: none;
+    color: #000;
+
+}
+nav .mobile-sidebar .nav-elements a:hover
+{
+    color:  #E6B433;  
+}
+
+/* Mobile heropage */
+
+.home-hero-page
+{
+    padding: 25px 0 ;
+}
+.home-hero-page img
+{
+    width: 50%;
+}
+
+.main-heading
+{
+    position: relative;
+    font-weight: 700;
+    font-size: 1.3em;
+    z-index: 1;
+}
+
+.sub-heading
+{
+    position: relative;
+    font-weight: 400;
+    font-size: 1em;
+    z-index: 1;
+}
+
+/*red section Shark tail */
+
+.home-red-section::before
+{
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: #C95050;
+    position: absolute;
+    right: 0;
+    top: -39px;
+    z-index: -2;
+}
+.home-red-section::after
+{
+    content: "";
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    position: absolute;
+    right: 0;
+    top: -80px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Mobile red section  */
+
+.home-red-section
+{
+    background: #C95050;
+    color: white;
+    transform: skewY(-5deg);
+    z-index: 0;
+    padding: 20px;
+
+}
+.home-red-section .red-section-container
+{
+    display: flex;
+    flex-direction: column;
+    transform: skewY(5deg);
+    list-style-type: none;
+}
+
+.home-red-section .red-section-container .red-section-container-item img
+{
+    width: 80px;
+    height: auto;
+    margin: 10px 20px 10px 0;
+    padding: 10px 20px 10px 0;
+}
+.home-red-section .red-section-container .red-section-container-item p
+{
+    font-size: 0.8em;
+    margin: 10px 20px 10px 0;
+    padding: 10px 20px 10px 0;
+    line-height: 2.2em;
+}
+
+/* Mobile team sec */
+
+.home-team .team-heading
+{
+    padding: 20px;
+}
+.home-team img
+{
+    width: 60%;
+    padding: 20px 20px 20px 20px;
+}
+.home-team .team-name
+{
+    font-size: 1.1em;
+}
+.home-team hr
+{
+    width: 20px;
+}
+.home-team .team-job
+{
+    font-size: 1em;
+}
+.home-team p
+{
+    font-size: 0.8em;
+    padding: 10px 40px;
+
+}
+
+/* Mobile C2A */
+
+.home-call2action 
+{
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+
+.home-call2action .button
+{
+    text-decoration: none;
+    background: #C95050;
+    border-bottom: 5px #c73333 solid;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 1.1em;
+    color: #fff;
+    
+}
+.home-call2action .button:hover
+{
+    position: relative;
+    top: 1px;
+    border-bottom: 4px #c73333 solid;
+
+}
+
+
+/* Mobile footer */
+
+footer
+{
+    background: #444444;
+    display: flex;
+    text-align: left;
+    width: 100%;
+    height: auto;
+    align-content: flex-start;
+    flex-direction: column;
+}
+footer .identity
+{
+    margin-top: 30px;
+}
+footer p
+{
+    padding-left: 20px;
+    margin-top: -7px;
+    white-space: pre-line;
+    font-size: 0.8em;
+}
+
+footer ul
+{
+    list-style-type: none;
+    margin-left: -20px;
+    color: white;
+}
+footer ul li
+{
+    cursor: pointer;
+    font-size: 0.8em;
+
+    
+}
+
+/* Desktop adj */
+
+@media only screen and (min-width: 650px) 
+    {
+    body{
+    font-size: 20px;
+    }
+    /* Logo */
+    .identity-addon
+    {
+        top: -8px;
+    }
+    /* nav adj for desktop*/
+    .mobile-nav-icon
+    {
+        visibility: hidden;
+    }
+    nav
+    {
+        visibility: visible;
+        background: #fff;
+        height: inherit;
+        width: inherit;
+    }
+    nav .desktop-show
+    {
+        flex-direction: row;
+    }
+    nav .desktop-show .nav-elements
+    {
+        padding: 0 20px 0 0;
+        margin-top: -1px;
+    }
+    /* Red section sizing adj*/
+    .home-red-section
+    {
+        border-top-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    }
+    .home-red-section .red-section-container .red-section-container-item p
+    {
+        padding: 10px 80px 10px 80px;
+    }
+    /* Hero section sizing adj*/
+    .home-hero-page img
+    {
+        width: 30%;
+    }
+    /* Team section sizing adj */
+    .home-team img
+    {
+    width: 40%;
+    }
+        .home-team p
+    {
+        padding: 10px 140px;
+    } 
+    /* Footer font sizing */
+    footer .identity
+    {
+        margin-top: 20px;
+    }
+    footer p, footer li
+    {
+        font-size: 0.8em;
+    }
+
+
+    
+}
+
+
+@media only screen and (min-width: 850px) 
+{
+    /* Red section 2col/2row */
+    .home-red-section
+    {
+    border-bottom-right-radius: 0;
+    }
+      .home-red-section .red-section-container
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
+    .home-red-section .red-section-container .red-section-container-item
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 50%;
+    }  
+    .home-red-section .red-section-container .red-section-container-item p
+    {
+        padding: 50px 20px;
+        text-align: left;
+    }  
+    .home-red-section .red-section-container .red-section-container-item img
+    {
+        width: 229px;
+    }  
+}
+
+@media only screen and (min-width: 1150px) 
+{
+    /* Fonts adj, logo indent */
+    body{
+        font-size: 25px;
+        }
+    header
+    {
+        font-size: 20px;
+    }
+    header .identity
+    {
+        margin-left: 50px;
+    }
+    /* Hero sec padding adj */
+    .home-hero-sub
+    {
+        padding-bottom: 20px
+    }
+
+    /* Footer font adj */
+    footer p, footer li
+    {
+        font-size: 0.7em;
+    }
+    /* Team 2col/1row */
+    .home-team .team-container
+    {
+        display: flex;
+    }
+    .home-team .worker-container
+    {
+        width: 50%;
+    }
+    .home-team .worker-container img 
+    {
+       width: 50%;
+    }
+    
+}
+@media only screen and (min-width: 1600px) 
+{
+    /* Narrowing content to 80vw */
+    section, :not(section.home-red-section)
+    {
+        width: 80vw;
+        margin: 0 auto;
+    }
+    
+    .desktop-narrow-view
+    {
+        width: 75vw;
+        margin: 0 auto;
+    }
+    /* hero section */
+    .home-hero-page img
+    {
+        width: 20%;
+    }
+    /* Red section */
+    .home-red-section .red-section-container
+    {
+        height: 640px;
+        align-items: center;
+    }
+    
+}
+
+
+
+
+
+

@@ -1,0 +1,129 @@
+body {
+    background-color: darkcyan;
+}
+#overlay{
+    visibility: hidden;
+}
+#container {
+    /* Preparing content to always center*/
+    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    cursor: pointer;
+    
+   
+}
+#container #white-keys, #container #black-keys{
+    /* Stacking both tiles, streching to container*/
+    position: absolute;
+    width: 100%;
+    
+
+
+}
+#container #white-keys {
+    /* Setting grid template for 7 rows */
+    display: grid;
+    grid-template-columns: repeat(7, 1fr) ;
+    grid-template-rows: auto;
+    height: 100%;
+    
+}
+#container #black-keys {
+    /* Dividing any white tile into 6 pices, so black tile can be fitted between */
+    display: grid;
+    grid-template-columns: repeat(42, 1fr) ;
+    grid-template-rows: auto;
+    height: 58%;
+}
+
+#container #white-keys kbd{
+    /* Cosmetics */
+    background: white;
+    border: 1px black solid;
+    border-radius: 0 0 6% 6%;
+    text-align: center;
+    
+
+}
+#container #black-keys kbd{
+    /* Coloring only tiles that are being used */
+    background: black;
+    color: white;
+    border-radius: 0 0 6% 6%;
+    z-index: 99;
+    text-align: center;
+
+}
+
+
+/* Placing on 6th and 1st pice of 2 white keys*/
+#container #black-keys kbd:nth-of-type(1){
+    grid-column: 6 / span 2;
+    
+}
+#container #black-keys kbd:nth-of-type(2){
+    grid-column: 12 / span 2;
+    
+}
+#container #black-keys kbd:nth-of-type(3){
+    grid-column: 24 / span 2;
+    
+}
+#container #black-keys kbd:nth-of-type(4){
+    grid-column: 30 / span 2;
+    
+}
+#container #black-keys kbd:nth-of-type(5){
+    grid-column: 36 / span 2;
+    
+}
+/*Hiding keyboard keys to make them apear on hover*/
+#container #black-keys kbd > p, #container #white-keys kbd > p{
+    visibility: hidden;
+    
+
+}
+#container:hover #black-keys kbd > p,  #container:hover #white-keys kbd >p{
+    visibility: visible;
+}
+@media (max-width: 1000px) and (orientation: landscape) {
+    /* Stretching keys to full screen on mobiel */
+    #container {
+        top:5vh;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90vw;
+        height: 90vh;
+    }
+    /* Fixing bugged hover, keys on click were given a hover state */
+    #container:hover #black-keys kbd > p,  #container:hover #white-keys kbd >p{
+        visibility: hidden;
+    }
+
+}
+/* Over lay that instructs to switch to landscape */
+@media (orientation: portrait)
+{
+    #container{
+        z-index: -1;
+    }
+    #overlay{
+        visibility: visible;
+        height: 100vh;
+        width: 100vw;
+        background: #c0c0c0a6;
+        z-index: 99;
+        
+    }
+    #overlay>span{
+        z-index: 99;
+        position: relative;
+        top: 10%;
+        font-size: 4em;
+    }
+}

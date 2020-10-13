@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sprzedaż mieszkań</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <a class="identity identity-black" href="#">
+            HomeFinder
+            <img class="identity-addon" src="graphics/logo.svg" alt="site logo">
+        </a>
+        <!-- <div class="mobile-nav-icon" id="mobile-nav-icon"></div> -->
+        <i class="fa fa-bars fa-2x mobile-nav-icon " id="mobile-nav-icon"></i>
+        <i class="fa fa-times fa-2x mobile-nav-cross " id="mobile-nav-cross" style="visibility:hidden"></i>
+        <nav id="nav">
+            <ul class="nav-container desktop-show mobile-sidebar mobile-hide">
+                <li class="nav-elements"><a href="#">Strona główna</a></li>
+                <li class="nav-elements"><a href="#home-red-section">Usługi</a></li>
+                <li class="nav-elements"><a href="#home-team">O nas</a></li>
+                <li class="nav-elements"><a href="#footer">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Heropage -->
+    <section class="home-hero-page">
+        <img src="graphics/Hero graphic.svg" alt="Isometric house ilustration">
+        <h1 class="home-hero-main main-heading">Kupuj mieszkania bez wychodzeni
+            z domu</h1>
+        <h2 class="home-hero-sub sub-heading">Wybór mieszkania jeszcze nigdy nie był tak łatwy</h2>
+    </section>
+    <!-- Red section -->
+    <section class="home-red-section" id="home-red-section">
+        <div class="desktop-narrow-view">
+            <ul class="red-section-container">
+                <li class="red-section-container-item">
+                    <img src="graphics/coins-icon.png" alt="coin icon">
+                    <p>Oszczędź sobie wydatków oraz czasu podczas dojazdów na miejsca spotkań. Rozsiądź się wygodnie i
+                        obejrzyj swoje przyszłę mieszkanie w wirtualnej rzeczywistości. </p>
+                </li>
+                <li class="red-section-container-item">
+                    <img src="graphics/settings-icon.png" alt="settings icon">
+                    <p> Nasze algorytmy zwiększają szansę znalezienia mieszkania aż o 150% oraz zapewniają, że wyjątkowe
+                        okazje nie uciekną Ci sprzed nosa.</p>
+                </li>
+                <li class="red-section-container-item">
+                    <img src="graphics/find-icon.png" alt="find icon">
+                    <p>Posiadamy dużą bazę danych mieszkań dostępnych na smartwonach oraz komputerach osobistych.
+                        Zaufało nam już steki tysięci klientów z całego świata.</p>
+                </li>
+                <li class="red-section-container-item">
+                    <img src="graphics/keys-icon.png" alt="keys icon">
+                    <p>Mamy 20 lat doświadczenia na rynku co stanowi o naszym profesjonaliźmie i podejściu do klienta z
+                        zachowaniem wszystkich zasad ostrożności. </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- Team section -->
+    <section class="home-team" id="home-team">
+        <h1 class="team-heading main-heading">Nasz Zespół:</h1>
+        <div class="team-container">
+            <div class="worker-container">
+                <figur>
+                    <img src="graphics/teamJane.svg" alt="Jane picture">
+                    <figcaption class="sr-only">Our employe, Jane </figcaption>
+                </figur>
+                <h2 class="team-name">Jane Doe</h2>
+                <hr>
+                <p class="team-job">Doradca klienta</p>
+                <p> Uśmiechnięta i zawsze gotowa do pomocy.
+                    Zawsze służy w sprawach prawnych oraz formalnych dotyczących zakupy czy wynajmu
+                </p>
+            </div>
+            <div class="worker-container">
+                <figur>
+                    <img src="graphics/teamJoe.svg" alt="Joe picture">
+                    <figcaption class="sr-only">Our employe, Joe </figcaption>
+                </figur>
+                <h3 class="team-name">Joe Doe</h3>
+                <hr>
+                <p class="team-job">Agent nieruchomości</p>
+                <p>
+                    Monitoruje rynku nieruchomości i zapewnia najlepsze ofert klientowi tak aby każda strona była
+                    zadowolona
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Call to action -->
+    <section class="home-call2action">
+        <h1 class="c2a-heading main-heading">Twój nowy dom już na Ciebie czeka</h1>
+        <a class="button flat-button" href="">Dołącz do nas</a>
+    </section>
+    <!-- foo -->
+    <footer id="footer">
+        <a class="identity identity-white" href="#">
+            HomeFinder
+            <img class="identity-addon" src="graphics/logo.svg" alt="site logo">
+        </a>
+        <p>Wojciech Kwiatkowkski &copy 2019
+            2800 N Main ST Santa Ana,
+            CA 92705
+        </p>
+        <ul>
+            <li>Regulamin usługi</li>
+            <li>Polityka prywatności</li>
+        </ul>
+    </footer>
+    <script>
+        var menuToggle = document.getElementById("mobile-nav-icon");
+        var menuExit = document.getElementById("mobile-nav-cross");
+        var menu = document.getElementById("nav");
+
+        menuToggle.addEventListener("click", function (e) {
+            menu.style.visibility = "visible";
+            menuToggle.style.visibility = "hidden"
+            menuExit.style.visibility = "visible"
+        })
+        menuExit.addEventListener("click", function (e) {
+            menu.style.visibility = "hidden";
+            menuExit.style.visibility = "hidden"
+            menuToggle.style.visibility = "visible"
+        })
+
+    </script>
+</body>
+
+</html>
