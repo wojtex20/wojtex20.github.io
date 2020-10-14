@@ -1,5 +1,6 @@
 body {
-    background-color: darkcyan;
+    background: rgb(224,179,39);
+    background: linear-gradient(90deg, rgba(224,179,39,1) 0%, rgba(211,151,87,1) 61%, rgba(211,112,87,1) 100%);
 }
 #overlay{
     visibility: hidden;
